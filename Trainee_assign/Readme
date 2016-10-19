@@ -1,0 +1,25 @@
+This project  demonstrates the client server aplication
+
+Overview:
+
+CLient Application : Client application takes IP address of server to connect 
+		     as command line argument.On, successful connection estab-
+                     lishment client starts reading a text file and sends it 
+		     to server in 1KB chunks.Client writes the received data 
+		     in output file. When whole file is converted to capital
+		     letters,client exits gracefully by closing the connection
+
+Server Application : Server application takes port address to listen on as 
+		     command line arguments.On receiving each chunk from client,
+		     server converts the text into all capital letter and sends it
+                     back to client.
+
+Step to run the Client-Server Application :
+
+-Run the Command "make" in terminal compiling source file
+-If want to clear all object files type make clean
+
+-At Client side run the following command:
+     ./client <server_ip> <server_port> <input_filename>
+-At Server side run the following command:
+     ./server <server_port> 
